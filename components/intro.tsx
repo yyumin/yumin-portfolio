@@ -45,10 +45,10 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <>
-          Hey, I'm Yumin Chen. I'm a <span className="text-3xl">&lt;</span>{" "}
+          Hey, I am Yumin Chen. I am a <span className="text-3xl">&lt;</span>{" "}
           <span className="text-3xl">developer </span>
           <span className="text-3xl">/&gt;</span>. I enjoy building sites &
-          apps. I'm currently a computer science student at University of
+          apps. I am currently a computer science student at University of
           British Columbia.
         </>
       </motion.p>

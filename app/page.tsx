@@ -1,8 +1,10 @@
+"use client";
 import About from "@/components/about";
-import Header from "@/components/header";
+import Blogs from "@/components/blogs";
 import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
+import Experience from "@/components/experience";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <SectionDivider />
       <About />
       <Projects />
+      <Blogs />
+      <Experience />
     </main>
   );
 }

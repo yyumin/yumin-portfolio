@@ -1,10 +1,34 @@
 "use client";
 import Image from "next/image";
-import selfieImg from "@/public/selfie.jpg";
+import img from "@/app/favicon.ico";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { MoveRight, ArrowDownToLine, Linkedin, Github } from "lucide-react";
 import { useSectionInView } from "@/lib/hooks";
+
+function Developer() {
+  return (
+    <span className="group text-4xl">
+      <span className="font-mono">&lt;</span>Developer
+      <span className="font-mono">/&gt;</span>
+      <span className="invisible inline-flex text-zinc-300 before:content-['|'] group-hover:visible group-hover:animate-typing dark:text-zinc-500" />
+    </span>
+  );
+}
+
+function Designer() {
+  return (
+    <span className="group relative text-4xl rounded-2xl bg-black/5 p-1 dark:bg-white/5">
+      <span className="pointer-events-none absolute inset-0 border border-lime-700/90 opacity-70 group-hover:border-dashed group-hover:opacity-100 dark:border-lime-400/90">
+        <span className="absolute -left-0.5 -top-0.5 h-1.5 w-1.5 border border-lime-700 bg-zinc-50 dark:border-lime-400" />
+        <span className="absolute -bottom-0.5 -right-0.5 h-1.5 w-1.5 border border-lime-700 bg-zinc-50 dark:border-lime-400" />
+        <span className="absolute -bottom-0.5 -left-0.5 h-1.5 w-1.5 border border-lime-700 bg-zinc-50 dark:border-lime-400" />
+        <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 border border-lime-700 bg-zinc-50 dark:border-lime-400" />
+      </span>
+      Designer
+    </span>
+  );
+}
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -27,29 +51,29 @@ export default function Intro() {
             }}
           >
             <Image
-              src={selfieImg}
+              src={img}
               alt="selfie"
-              width={100}
-              height={100}
               quality={95}
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.15rem] border-white"
+              className="h-16 w-16 rounded-full object-cover border-[0.15rem] border-white"
             />
           </motion.div>
         </div>
       </div>
 
       <motion.p
-        className="mb-10 mt-4 px-4 text-large font-medium sm:text-xl"
+        className="mb-10 mt-4 px-4 font-medium sm:text-xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <>
-          Hey, I am Yumin Chen. I am a <span className="text-3xl">&lt;</span>{" "}
-          <span className="text-3xl">developer </span>
-          <span className="text-3xl">/&gt;</span>. I enjoy building sites &
-          apps. I am currently a computer science student at University of
-          British Columbia.
+          <Developer />
+          <Designer />
+          <br />
+          <span className="text-base font-normal text-zinc-600 dark:text-zinc-400">
+            I am Yumin Chen. I am currently a computer science student at
+            University of British Columbia. I enjoy building sites & apps.
+          </span>
         </>
       </motion.p>
 
